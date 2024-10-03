@@ -15,7 +15,7 @@ RUN set -x && \
 COPY app/fakefish.py app/cert.pem* app/cert.key* /opt/fakefish/
 
 ADD app/templates /opt/fakefish/templates
-ADD ocp_scripts /opt/fakefish/custom_scripts
+ADD kubevirt_scripts /opt/fakefish/custom_scripts
 
 WORKDIR /opt/fakefish/
 
