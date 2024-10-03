@@ -21,6 +21,9 @@ build-supermicro:
 build-hpe-gen9:
 	podman build . -f hpe-gen9-ilo4-scripts/Containerfile -t $(IMAGE_URL):$(TAG) --label org.opencontainers.image.authors"=$(AUTHOR)"
 
+build-ocp: pre-reqs
+	podman build . -f ocp_scripts/Containerfile -t $(IMAGE_URL):$(TAG) --label org.opencontainers.image.authors"=$(AUTHOR)"
+
 build-custom: pre-reqs
 	podman build . -f custom_scripts/Containerfile -t $(IMAGE_URL):$(TAG) --label org.opencontainers.image.authors"=$(AUTHOR)"
 
