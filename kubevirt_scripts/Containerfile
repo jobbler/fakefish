@@ -1,5 +1,5 @@
 FROM registry.fedoraproject.org/fedora-minimal:40
-MAINTAINER Mario Vazquez <mavazque@redhat.com>
+MAINTAINER https://github.com/openshift-metal3/fakefish
 
 RUN set -x && \
     microdnf -y update && \
@@ -15,7 +15,7 @@ RUN set -x && \
 COPY app/fakefish.py app/cert.pem* app/cert.key* /opt/fakefish/
 
 ADD app/templates /opt/fakefish/templates
-ADD kubevirt_scripts /opt/fakefish/custom_scripts
+ADD ocp_scripts /opt/fakefish/custom_scripts
 
 WORKDIR /opt/fakefish/
 
