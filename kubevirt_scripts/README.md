@@ -6,7 +6,7 @@ These scripts are derivitives of the scripts in this repositories `kubevirt_scri
 
 ## Building
 
-The contianer image can be built by running `make build-ocp`.
+The container image can be built by running `make build-ocp`.
 
 
 ## Certificate issues
